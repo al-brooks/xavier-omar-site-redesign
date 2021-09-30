@@ -11,6 +11,7 @@ const db = pgp(connectionString);
 
 //middleware
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 //routes
@@ -19,38 +20,30 @@ app.get('/', (req, res) => {
   res.send('Node Server is Working!');
 });
 
-app.post('/payment', (req, res) => {
-  const { product, token } = req.body;
-  console.log('PRODUCT', product);
-  console.log('PRICE', product.price);
-  // idempotencyKey is used to prevent accidental double charges
-  const idempotencyKey = uuidv4();
-
-  return stripe.customers
-    .create({
-      email: token.email,
-      source: token.id
-    })
-    .then((customer) => {
-      stripe.charges.create(
-        {
-          amount: product.price * 100,
+// updated stripe checkout
+app.post('/payment', async (req, res) => {
+  const name = req.body.product_name;
+  const price = req.body.product_price;
+  console.log(name, price);
+  const session = await stripe.checkout.sessions.create({
+    payment_method_types: ['card'],
+    line_items: [
+      {
+        price_data: {
           currency: 'usd',
-          customer: customer.id,
-          receipt_email: token.email,
-          description: `purchase of ${product.name}`,
-          shipping: {
-            name: token.card.name,
-            address: {
-              country: token.card.address_country
-            }
-          }
+          product_data: {
+            name: name
+          },
+          unit_amount: price
         },
-        { idempotencyKey }
-      );
-    })
-    .then((result) => res.status(200).json(result))
-    .catch((err) => console.log(err));
+        quantity: 1
+      }
+    ],
+    mode: 'payment',
+    success_url: 'http://localhost:3000/success',
+    cancel_url: 'http://localhost:3000'
+  });
+  res.redirect(303, session.url);
 });
 
 //listen

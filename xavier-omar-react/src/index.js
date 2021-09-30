@@ -4,7 +4,7 @@ import './index.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import App from './components/App';
 import BaseLayout from './components/BaseLayout';
-// import Checkout from './components/Checkout';
+import Success from './components/Success';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -13,6 +13,8 @@ ReactDOM.render(
       <BaseLayout>
         <Switch>
           <Route exact path="/" component={App} />
+          <Route exact path="/success" component={Success} />
+          <Route exact path="/cancel" component={App} />
           {/* <Route exact path="/checkout" component={Checkout} /> */}
         </Switch>
       </BaseLayout>
