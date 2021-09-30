@@ -1,0 +1,3 @@
+export const MUSIC_LOADED = 'MUSIC_LOADED';
+export const VIDEOS_LOADED = 'VIDEOS_LOADED';
+export const MERCH_LOADED = 'MERCH_LOADED';

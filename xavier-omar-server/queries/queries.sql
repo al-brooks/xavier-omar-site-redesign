@@ -52,3 +52,9 @@ CREATE TABLE checkout (
   	merch_id INTEGER REFERENCES merch (merch_id),
   	date_purchased TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )
+
+INSERT INTO merch (merch_name, merch_type, description, price, front_pic, back_pic)
+VALUES
+('if You Feel Hoodie - Bone','Hoodie','if You Feel design screen printed on 80/20 cotton/polyester blend','50','https://s9.limitedrun.com/images/1504214/Hoodie-Front.png','https://s9.limitedrun.com/images/1504213/Hoodie_back.png'),
+('if You Feel Tee - Bay','T-Shirt','if You Feel design screen printed on 100% ring spun cotton','25','https://s9.limitedrun.com/images/1504215/Tee_front.png','https://s9.limitedrun.com/images/1504216/Tee_back.png'),
+('if You Feel Long Sleeve', 'Long Sleeve Shirt','if You Feel design screen printed on 100% ring spun cotton','35','https://s9.limitedrun.com/images/1494703/IYF-Mocks-03.png','https://s9.limitedrun.com/images/1497848/LS_Back.png')

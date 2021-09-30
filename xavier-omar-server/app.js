@@ -20,6 +20,36 @@ app.get('/', (req, res) => {
   res.send('Node Server is Working!');
 });
 
+app.get('/api/music', (req, res) => {
+  db.any('SELECT* FROM music')
+    .then((music) => {
+      res.json(music);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+});
+
+app.get('/api/videos', (req, res) => {
+  db.any('SELECT* FROM videos')
+    .then((videos) => {
+      res.json(videos);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+});
+
+app.get('/api/merch', (req, res) => {
+  db.any('SELECT* FROM merch')
+    .then((merch) => {
+      res.json(merch);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+});
+
 // updated stripe checkout
 app.post('/payment', async (req, res) => {
   const name = req.body.product_name;
