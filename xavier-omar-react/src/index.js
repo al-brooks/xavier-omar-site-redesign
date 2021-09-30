@@ -1,22 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import reportWebVitals from './reportWebVitals';
 import './index.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { createStore } from 'redux';
-import { createStoreHook, Provider } from 'react-redux';
-import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import { createStore, compose, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import reducer from './store/reducer';
+
 import App from './components/App';
 import BaseLayout from './components/BaseLayout';
 import Success from './components/Success';
 import MusicList from './components/MusicList';
 import VideoList from './components/VideoList';
 import Merch from './components/Merch';
-import reducer from './store/reducer';
 
-const store = createStore(
-  reducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
 
 ReactDOM.render(
   <React.StrictMode>
