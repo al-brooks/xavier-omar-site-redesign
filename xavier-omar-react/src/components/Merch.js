@@ -29,6 +29,11 @@ const Merch = (props) => {
             name="product_price"
             value={merchItem.price * 100}
           />
+          <input
+            type="hidden"
+            name="product_image"
+            value={merchItem.front_pic}
+          />
           <button type="submit">Checkout</button>
         </form>
       </section>

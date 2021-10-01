@@ -54,7 +54,7 @@ app.get('/api/merch', (req, res) => {
 app.post('/payment', async (req, res) => {
   const name = req.body.product_name;
   const price = req.body.product_price;
-  console.log(name, price);
+  const image = req.body.product_image;
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
     line_items: [
@@ -62,7 +62,8 @@ app.post('/payment', async (req, res) => {
         price_data: {
           currency: 'usd',
           product_data: {
-            name: name
+            name: name,
+            images: [image]
           },
           unit_amount: price
         },
