@@ -26,9 +26,9 @@ ReactDOM.render(
         <BaseLayout>
           <Switch>
             <Route exact path="/" component={App} />
+            <Route exact path="/merch" component={Merch} />
             <Route exact path="/music" component={MusicList} />
             <Route exact path="/videos" component={VideoList} />
-            <Route exact path="/merch" component={Merch} />
             <Route exact path="/success" component={Success} />
           </Switch>
         </BaseLayout>

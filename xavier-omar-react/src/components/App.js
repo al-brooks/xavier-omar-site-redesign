@@ -1,10 +1,6 @@
 import { connect } from 'react-redux';
 import { useEffect } from 'react';
-import logo from '../images/logo-min.png';
 import '../css/output.css';
-import Merch from './Merch';
-import MusicList from './MusicList';
-import VideoList from './VideoList';
 import * as actionCreators from '../store/creators/actionCreators';
 
 const App = (props) => {
@@ -14,11 +10,7 @@ const App = (props) => {
     props.onMerchLoaded();
   }, [props]);
 
-  return (
-    <div>
-      <img id="logo" src={logo} alt="xavier omar logo" />
-    </div>
-  );
+  return <div id="app"></div>;
 };
 
 const mapDispatchToProps = (dispatch) => {

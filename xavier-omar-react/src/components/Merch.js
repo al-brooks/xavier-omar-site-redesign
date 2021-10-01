@@ -1,34 +1,53 @@
-import { React, useState } from 'react';
+import { connect } from 'react-redux';
+import { useEffect } from 'react';
+import * as actionCreators from '../store/creators/actionCreators';
 
-const Merch = () => {
-  const [product, setProduct] = useState({
-    name: 'if You Feel Sweatshirt',
-    price: 50,
-    productBy: 'Xavier Omar'
-  });
-  return (
-    <div>
-      <section>
-        <div class="merchItem">
-          <span>insert Merch Image</span>
-          <div class="description">
+const Merch = (props) => {
+  useEffect(() => {
+    props.onMerchLoaded();
+  }, []);
+
+  const merchItems = props.merch.map((merchItem) => {
+    return (
+      <section key={merchItem.merch_id} className="merchSection">
+        <div className="merchItem">
+          <img src={merchItem.front_pic} alt="merch front pic" />
+          <div className="description">
             <span>Add increment and decrement quantity button</span>
-            <h3>if You Feel Sweater</h3>
-            <h5>$50</h5>
+            <h3>{merchItem.merch_name}</h3>
+            <h5>{merchItem.price}</h5>
           </div>
         </div>
         <form action="http://localhost:8080/payment" method="POST">
-          <input type="hidden" name="product_name" value={product.name} />
+          <input
+            type="hidden"
+            name="product_name"
+            value={merchItem.merch_name}
+          />
           <input
             type="hidden"
             name="product_price"
-            value={product.price * 100}
+            value={merchItem.price * 100}
           />
           <button type="submit">Checkout</button>
         </form>
       </section>
-    </div>
-  );
+    );
+  });
+
+  return <div>{merchItems}</div>;
 };
 
-export default Merch;
+const mapStateToProps = (state) => {
+  return {
+    merch: state.merch
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onMerchLoaded: () => dispatch(actionCreators.fetchMerch())
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Merch);
