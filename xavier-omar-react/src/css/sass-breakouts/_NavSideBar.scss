@@ -1,4 +1,17 @@
-.link {
-  text-decoration: none;
-  color: inherit;
+@import './mixins';
+
+#navSideBar {
+  grid-column: 1 / span 2;
+  grid-row: 3 / 4;
+  // @include testBorder(red);
+  #navLinks {
+    padding-left: 10px;
+    @include flex(column, center, center);
+    .link {
+      margin: 30px 0px;
+      font-size: 25px;
+      text-decoration: none;
+      color: inherit;
+    }
+  }
 }

@@ -1,8 +1,12 @@
 #videoSection {
-  width: 700px;
-  height: 410px;
+  // width: 700px;
+  // height: 410px;
   overflow-y: scroll;
   scroll-behavior: smooth;
+  grid-column: 3 / span 3;
+  grid-row: 3 / span 2;
+  backdrop-filter: blur(6px);
+  // @include testBorder(red);
   .videoListing {
     height: 100%;
     display: flex;
@@ -10,7 +14,7 @@
     align-items: center;
     justify-content: center;
     iframe {
-      width: 645px;
+      // width: 645px;
       height: 400px;
     }
   }

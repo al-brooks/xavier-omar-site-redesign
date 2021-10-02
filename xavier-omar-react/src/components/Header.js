@@ -7,7 +7,7 @@ import tidal from '../images/Tidal-logo-min.png';
 
 const Header = () => {
   return (
-    <nav>
+    <nav id="socialNav">
       <a href="https://www.instagram.com/xvromar/?hl=en">
         <img className="socialBtns" src={insta} alt="instagram icon" />
       </a>

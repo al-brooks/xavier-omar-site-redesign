@@ -11,10 +11,10 @@ const Merch = (props) => {
     return (
       <div key={merchItem.merch_id} className="merchListing">
         <div className="merchItem">
+          <h3>{merchItem.merch_name}</h3>
           <img src={merchItem.front_pic} alt="merch front pic" />
           <div className="description">
             <span>Add increment and decrement quantity button</span>
-            <h3>{merchItem.merch_name}</h3>
             <h5>{merchItem.price}</h5>
           </div>
         </div>
