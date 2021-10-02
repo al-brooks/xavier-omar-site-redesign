@@ -1,11 +1,37 @@
 @import './mixins';
 
 #logoSideBar {
-  grid-column: 1 / span 3;
+  grid-column: 1 / 2;
   grid-row: 2 / 3;
   align-self: center;
+  @include flex(row, center, center);
   // @include testBorder(red);
   #logo {
-    height: 130px;
+    height: 200px;
   }
 }
+
+@media (min-width: 481px) {
+  #logoSideBar {
+    grid-column: 1 / span 2;
+    justify-self: flex-start;
+    padding-left: 20px;
+    #logo {
+      height: 225px;
+    }
+  }
+}
+
+@media (min-width: 641px) {
+  #logoSideBar {
+    justify-self: flex-start;
+    padding-left: 20px;
+    #logo {
+      height: 225px;
+    }
+  }
+}
+
+// @media (min-width: 961px)
+// @media (min-width: 1025px)
+// @media (min-width: 1281px)

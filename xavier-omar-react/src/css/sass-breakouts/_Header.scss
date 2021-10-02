@@ -1,12 +1,29 @@
 @import './mixins';
 
 #socialNav {
-  grid-column: 1 / span 5;
+  grid-column: 1 / 2;
   grid-row: 1 / 2;
   // @include testBorder(red);
-  @include flex(row, space-between, start);
+  @include flex(row, space-between, flex-start);
   padding: 10px;
   .socialBtns {
     height: 50px;
   }
 }
+
+@media (min-width: 481px) {
+  #socialNav {
+    grid-column: 1 / span 2;
+  }
+}
+@media (min-width: 641px) {
+  #socialNav {
+    @include flex(row, space-around, flex-start);
+    .socialBtns {
+      height: 30px;
+    }
+  }
+}
+// @media (min-width: 961px)
+// @media (min-width: 1025px)
+// @media (min-width: 1281px)

@@ -1,42 +1,87 @@
 #baseLayout {
   background: url("https://thissongissick.com/wp-content/uploads/2020/10/Xavier-Omar-scaled.jpg") no-repeat;
-  background-position: left 10%;
+  background-position: left;
   background-size: cover;
   margin: 0px;
   width: 100%;
   height: 100vh;
   color: white;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto 150px 1fr 1fr;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto 250px 250px 1fr;
 }
 
+@media (min-width: 481px) {
+  #baseLayout {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 350px 250px 1fr;
+  }
+}
 #app {
   display: none;
 }
 
 #socialNav {
-  grid-column: 1/span 5;
+  grid-column: 1/2;
   grid-row: 1/2;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
   padding: 10px;
 }
 #socialNav .socialBtns {
   height: 50px;
 }
 
+@media (min-width: 481px) {
+  #socialNav {
+    grid-column: 1/span 2;
+  }
+}
+@media (min-width: 641px) {
+  #socialNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  #socialNav .socialBtns {
+    height: 30px;
+  }
+}
 #logoSideBar {
-  grid-column: 1/span 3;
+  grid-column: 1/2;
   grid-row: 2/3;
   align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 #logoSideBar #logo {
-  height: 130px;
+  height: 200px;
 }
 
+@media (min-width: 481px) {
+  #logoSideBar {
+    grid-column: 1/span 2;
+    justify-self: flex-start;
+    padding-left: 20px;
+  }
+  #logoSideBar #logo {
+    height: 225px;
+  }
+}
+@media (min-width: 641px) {
+  #logoSideBar {
+    justify-self: flex-start;
+    padding-left: 20px;
+  }
+  #logoSideBar #logo {
+    height: 225px;
+  }
+}
 #navSideBar {
   grid-column: 1/span 2;
   grid-row: 3/4;
@@ -49,17 +94,38 @@
   align-items: center;
 }
 #navSideBar #navLinks .link {
+  background: #db142c;
+  border-radius: 10px;
+  padding: 2px 25px;
   margin: 30px 0px;
   font-size: 25px;
+  font-weight: bold;
   text-decoration: none;
   color: inherit;
 }
 
+@media (min-width: 481px) {
+  #navSideBar {
+    grid-column: 1/2;
+  }
+  #navSideBar #navLinks {
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+@media (min-width: 961px) {
+  #navSideBar {
+    grid-column: 1/2;
+  }
+}
 #merchSection {
   overflow-y: scroll;
   scroll-behavior: smooth;
-  grid-column: 3/span 3;
-  grid-row: 3/span 2;
+  grid-column: 1/2;
+  grid-row: 4/5;
   backdrop-filter: blur(6px);
 }
 #merchSection .merchListing {
@@ -77,7 +143,7 @@
   text-align: center;
 }
 #merchSection .merchListing .merchItem img {
-  height: 100px;
+  height: 300px;
 }
 #merchSection .merchListing form button {
   border: none;
@@ -89,13 +155,28 @@
   outline: inherit;
 }
 
+@media (min-width: 481px) {
+  #merchSection {
+    grid-column: 1/span 2;
+  }
+  #merchSection .merchListing .merchItem img {
+    height: 300px;
+  }
+}
+@media (min-width: 641px) {
+  #merchSection {
+    margin-top: 20px;
+  }
+  #merchSection .merchListing .merchItem img {
+    height: 300px;
+  }
+}
 #musicSection {
   overflow-y: scroll;
   scroll-behavior: smooth;
-  grid-column: 3/span 3;
-  grid-row: 3/span 2;
+  grid-column: 1/1;
+  grid-row: 4/5;
   backdrop-filter: blur(6px);
-  border: 2px solid red;
 }
 #musicSection .albumListing {
   height: 100%;
@@ -105,7 +186,7 @@
   align-items: center;
 }
 #musicSection .albumListing .albumCovers {
-  height: 250px;
+  height: 300px;
 }
 #musicSection .albumListing .streamingLinks {
   display: flex;
@@ -114,26 +195,61 @@
   align-items: center;
 }
 #musicSection .albumListing .streamingLinks a img {
-  margin: 5px;
+  margin: 10px;
   height: 50px;
 }
 
+@media (min-width: 481px) {
+  #musicSection {
+    grid-column: 1/span 2;
+  }
+  #musicSection .albumListing .albumCovers {
+    height: 400px;
+  }
+}
+@media (min-width: 641px) {
+  #musicSection {
+    margin-top: 20px;
+  }
+  #musicSection .albumListing .albumCovers {
+    height: 425px;
+  }
+}
 #videoSection {
   overflow-y: scroll;
   scroll-behavior: smooth;
-  grid-column: 3/span 3;
-  grid-row: 3/span 2;
+  grid-column: 1/2;
+  grid-row: 4/5;
   backdrop-filter: blur(6px);
 }
 #videoSection .videoListing {
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 #videoSection .videoListing iframe {
+  width: 320px;
   height: 400px;
+}
+
+@media (min-width: 481px) {
+  #videoSection {
+    grid-column: 1/span 2;
+    grid-row: 4/5;
+  }
+  #videoSection .videoListing iframe {
+    width: 481px;
+  }
+}
+@media (min-width: 641px) {
+  #videoSection {
+    margin-top: 20px;
+  }
+  #videoSection .videoListing iframe {
+    width: 641px;
+  }
 }
 
 /*# sourceMappingURL=output.css.map */

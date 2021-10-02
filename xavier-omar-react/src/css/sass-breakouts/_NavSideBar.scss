@@ -8,10 +8,34 @@
     padding-left: 10px;
     @include flex(column, center, center);
     .link {
+      background: $primaryColor;
+      border-radius: 10px;
+      padding: 2px 25px;
       margin: 30px 0px;
       font-size: 25px;
+      font-weight: bold;
       text-decoration: none;
       color: inherit;
     }
   }
 }
+
+@media (min-width: 481px) {
+  #navSideBar {
+    grid-column: 1 / 2;
+    #navLinks {
+      padding-left: 100px;
+      @include flex(column, flex-start, flex-start);
+    }
+  }
+}
+@media (min-width: 641px) {
+}
+
+@media (min-width: 961px) {
+  #navSideBar {
+    grid-column: 1 / 2;
+  }
+}
+// @media (min-width: 1025px)
+// @media (min-width: 1281px)
