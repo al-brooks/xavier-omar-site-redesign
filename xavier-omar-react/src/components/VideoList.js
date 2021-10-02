@@ -9,11 +9,11 @@ const VideoList = (props) => {
 
   const Videos = props.videos.map((video) => {
     return (
-      <div key={video.video_id} className="video">
-        <h4>{video.title}</h4>
+      <div key={video.video_id} className="videoListing">
+        {' '}
         <iframe
-          width="560"
-          height="315"
+          // width="560"
+          // height="315"
           src={video.embed_url}
           title="YouTube video player"
           frameBorder="0"

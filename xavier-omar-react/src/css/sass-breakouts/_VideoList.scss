@@ -1,0 +1,17 @@
+#videoSection {
+  width: 700px;
+  height: 410px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  .videoListing {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    iframe {
+      width: 645px;
+      height: 400px;
+    }
+  }
+}

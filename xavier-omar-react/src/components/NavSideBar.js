@@ -3,9 +3,15 @@ import { NavLink } from 'react-router-dom';
 const NavSideBar = () => {
   return (
     <section id="navSideBar">
-      <NavLink to="/merch">Merch</NavLink>
-      <NavLink to="/music">Music</NavLink>
-      <NavLink to="/videos">Videos</NavLink>
+      <NavLink className="link" to="/merch">
+        Merch
+      </NavLink>
+      <NavLink className="link" to="/music">
+        Music
+      </NavLink>
+      <NavLink className="link" to="/videos">
+        Videos
+      </NavLink>
     </section>
   );
 };

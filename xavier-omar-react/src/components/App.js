@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import { useEffect } from 'react';
-import '../css/output.css';
 import * as actionCreators from '../store/creators/actionCreators';
 
 const App = (props) => {

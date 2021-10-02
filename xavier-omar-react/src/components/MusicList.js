@@ -1,5 +1,8 @@
 import { connect } from 'react-redux';
 import { useEffect } from 'react';
+import apple from '../images/Apple-logo-min.png';
+import spotify from '../images/Spotify-logo-min.png';
+import tidal from '../images/Tidal-logo-min.png';
 import * as actionCreators from '../store/creators/actionCreators';
 
 const MusicList = (props) => {
@@ -9,21 +12,28 @@ const MusicList = (props) => {
 
   const musicItems = props.music.map((album) => {
     return (
-      <section key={album.music_id} className="musicSection">
-        <div className="album">
-          <h4>{album.title}</h4>
-          <img src={album.cover_art_url} alt="album cover" />
-          <div className="streamingLinks">
-            <a href={album.apple_url}>apple music</a>
-            <a href={album.spotify_url}>spotify music</a>
-            <a href={album.tidal_url}>tidal music</a>
-          </div>
+      <div key={album.music_id} className="albumListing">
+        <img
+          className="albumCovers"
+          src={album.cover_art_url}
+          alt="album cover"
+        />
+        <div className="streamingLinks">
+          <a href={album.apple_url}>
+            <img src={apple} alt="apple music icon" />
+          </a>
+          <a href={album.spotify_url}>
+            <img src={spotify} alt="spotify music icon" />
+          </a>
+          <a href={album.tidal_url}>
+            <img src={tidal} alt="tidal music icon" />
+          </a>
         </div>
-      </section>
+      </div>
     );
   });
 
-  return <div>{musicItems}</div>;
+  return <section id="musicSection">{musicItems}</section>;
 };
 
 const mapStateToProps = (state) => {

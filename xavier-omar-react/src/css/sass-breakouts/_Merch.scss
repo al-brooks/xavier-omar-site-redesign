@@ -1,0 +1,29 @@
+#merchSection {
+  width: 500px;
+  height: 500px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  .merchListing {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .merchItem {
+      img {
+        height: 200px;
+      }
+    }
+    form {
+      button {
+        border: none;
+        background: none;
+        color: inherit;
+        padding: 0px;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+      }
+    }
+  }
+}

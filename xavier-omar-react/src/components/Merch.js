@@ -9,7 +9,7 @@ const Merch = (props) => {
 
   const merchItems = props.merch.map((merchItem) => {
     return (
-      <section key={merchItem.merch_id} className="merchSection">
+      <div key={merchItem.merch_id} className="merchListing">
         <div className="merchItem">
           <img src={merchItem.front_pic} alt="merch front pic" />
           <div className="description">
@@ -34,13 +34,13 @@ const Merch = (props) => {
             name="product_image"
             value={merchItem.front_pic}
           />
-          <button type="submit">Checkout</button>
+          <button type="submit">Buy</button>
         </form>
-      </section>
+      </div>
     );
   });
 
-  return <div>{merchItems}</div>;
+  return <section id="merchSection">{merchItems}</section>;
 };
 
 const mapStateToProps = (state) => {
