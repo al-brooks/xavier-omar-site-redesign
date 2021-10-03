@@ -8,6 +8,7 @@ const app = express();
 const pgp = require('pg-promise')();
 const connectionString = process.env.DB_CONNECT;
 const db = pgp(connectionString);
+const nodemailer = require('nodemailer');
 
 //middleware
 app.use(express.json());
@@ -75,6 +76,34 @@ app.post('/payment', async (req, res) => {
     cancel_url: 'http://localhost:3000'
   });
   res.redirect(303, session.url);
+});
+
+app.post('/email', async (req, res) => {
+  let transport = nodemailer.createTransport({
+    host: 'smtp.mailtrap.io',
+    port: 2525,
+    auth: {
+      user: '3442ef7accc2bb',
+      pass: 'cdbb4398ec1243'
+    }
+  });
+
+  const message = {
+    from: 'xavieromarredesign@email.com',
+    to: 'to@email.com',
+    subject: 'Welcome to our mailing list!',
+    html: `<h1>Thanks for support Xavier Omar and his music!</h1> <p>We'll send you exclusive offers and keep you posted on upcoming shows!</p>`
+  };
+
+  transport.sendMail(message, function (err, info) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(info);
+    }
+  });
+
+  res.send({ success: true });
 });
 
 //listen
