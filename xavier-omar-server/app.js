@@ -72,13 +72,14 @@ app.post('/payment', async (req, res) => {
       }
     ],
     mode: 'payment',
-    success_url: 'http://localhost:3000/success',
+    success_url: 'http://localhost:3000/payment/success',
     cancel_url: 'http://localhost:3000'
   });
   res.redirect(303, session.url);
 });
 
 app.post('/email', async (req, res) => {
+  const email = req.body.email;
   let transport = nodemailer.createTransport({
     host: 'smtp.mailtrap.io',
     port: 2525,
@@ -90,9 +91,9 @@ app.post('/email', async (req, res) => {
 
   const message = {
     from: 'xavieromarredesign@email.com',
-    to: 'to@email.com',
+    to: `${email}`,
     subject: 'Welcome to our mailing list!',
-    html: `<h1>Thanks for support Xavier Omar and his music!</h1> <p>We'll send you exclusive offers and keep you posted on upcoming shows!</p>`
+    html: `<h4>Thanks so much for supporting Xavier Omar and his vision!</h4><p>We love our fans and will send you exclusive offers and keep you posted on upcoming shows! If you have any questions please reach out to us at <b>xavieromarredesign@email.com</b></p>`
   };
 
   transport.sendMail(message, function (err, info) {
@@ -103,7 +104,9 @@ app.post('/email', async (req, res) => {
     }
   });
 
-  res.send({ success: true });
+  db.none('INSERT INTO users(email) VALUES($1)', [email]).then(() => {
+    res.redirect('http://localhost:3000/email/success');
+  });
 });
 
 //listen

@@ -14,6 +14,7 @@ import Success from './components/Success';
 import MusicList from './components/MusicList';
 import VideoList from './components/VideoList';
 import Merch from './components/Merch';
+import EmailSuccess from './components/EmailSuccess';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -29,7 +30,8 @@ ReactDOM.render(
             <Route exact path="/merch" component={Merch} />
             <Route exact path="/music" component={MusicList} />
             <Route exact path="/videos" component={VideoList} />
-            <Route exact path="/success" component={Success} />
+            <Route exact path="/payment/success" component={Success} />
+            <Route exact path="/email/success" component={EmailSuccess} />
           </Switch>
         </BaseLayout>
       </BrowserRouter>

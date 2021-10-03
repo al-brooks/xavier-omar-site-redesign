@@ -1,12 +1,27 @@
 // mobile
-#emailList {
+#success {
   grid-column: 1 / 2;
-  grid-row: 5 / 6;
-  padding-left: 10px;
+  grid-row: 4 / 5;
+  backdrop-filter: blur(2px);
+  #exitBtn {
+    // margin-top: 10px;
+    // margin-left: 25px;
+    padding: 5px 15px;
+    line-height: 30px;
+    text-decoration: none;
+    color: inherit;
+    border: 2px solid white;
+    border-radius: 20px;
+    font-size: 20px;
+  }
+  #successMsg {
+    margin-top: 20px;
+    text-align: center;
+  }
 }
 // small tablets
 @media (min-width: 481px) {
-  #emailList {
+  #success {
     grid-column: 1 / span 2;
   }
 }
@@ -17,7 +32,7 @@
 
 // landscape tablets
 @media (min-width: 961px) {
-  #emailList {
+  #success {
     grid-column: 1 / span 4;
     padding-bottom: 10px;
     justify-self: center;

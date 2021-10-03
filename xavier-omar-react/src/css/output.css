@@ -145,6 +145,7 @@
 #emailList {
   grid-column: 1/2;
   grid-row: 5/6;
+  padding-left: 10px;
 }
 
 @media (min-width: 481px) {
@@ -351,6 +352,68 @@
   #videoSection .videoListing iframe {
     width: 750px;
     height: 500px;
+  }
+}
+#success {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  backdrop-filter: blur(2px);
+}
+#success #exitBtn {
+  padding: 5px 15px;
+  line-height: 30px;
+  text-decoration: none;
+  color: inherit;
+  border: 2px solid white;
+  border-radius: 20px;
+  font-size: 20px;
+}
+#success #successMsg {
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media (min-width: 481px) {
+  #success {
+    grid-column: 1/span 2;
+  }
+}
+@media (min-width: 961px) {
+  #success {
+    grid-column: 1/span 4;
+    padding-bottom: 10px;
+    justify-self: center;
+  }
+}
+#emailSuccess {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  backdrop-filter: blur(2px);
+}
+#emailSuccess #exitBtn {
+  padding: 5px 15px;
+  line-height: 30px;
+  text-decoration: none;
+  color: inherit;
+  border: 2px solid white;
+  border-radius: 20px;
+  font-size: 20px;
+}
+#emailSuccess #emailMsg {
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media (min-width: 481px) {
+  #emailSuccess {
+    grid-column: 1/span 2;
+  }
+}
+@media (min-width: 961px) {
+  #emailSuccess {
+    grid-column: 1/span 4;
+    padding-bottom: 10px;
+    justify-self: center;
   }
 }
 
