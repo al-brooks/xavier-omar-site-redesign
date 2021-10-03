@@ -4,9 +4,21 @@
   overflow-y: scroll;
   scroll-behavior: smooth;
   grid-column: 1 / 2;
-  grid-row: 4 / 5;
-  // backdrop-filter: blur(6px);
+  grid-row: 1 / 6;
+  backdrop-filter: blur(2px);
   // @include testBorder(red);
+  #exitBtn {
+    margin-top: 10px;
+    margin-left: 25px;
+    padding: 5px 15px;
+    position: fixed;
+    line-height: 30px;
+    text-decoration: none;
+    color: inherit;
+    border: 2px solid white;
+    border-radius: 20px;
+    font-size: 30px;
+  }
   .videoListing {
     height: 100%;
     @include flex(column, center, center);
@@ -20,7 +32,6 @@
 @media (min-width: 481px) {
   #videoSection {
     grid-column: 1 / span 2;
-    grid-row: 4 / 5;
     .videoListing {
       iframe {
         width: 481px;
@@ -30,7 +41,7 @@
 }
 @media (min-width: 641px) {
   #videoSection {
-    margin-top: 20px;
+    // margin-top: 20px;
     .videoListing {
       iframe {
         width: 641px;
@@ -38,16 +49,27 @@
     }
   }
 }
-// @media (min-width: 961px)
+@media (min-width: 961px) {
+  #videoSection {
+    grid-column: 2 / span 3;
+    grid-row: 1 / 6;
+    .videoListing {
+      iframe {
+        width: 641px;
+      }
+    }
+  }
+}
 // @media (min-width: 1025px)
 @media (min-width: 1281px) {
   #videoSection {
-    grid-column: 2 / span 2;
-    grid-row: 3 / span 3;
-    margin-top: 20px;
+    // grid-column: 2 / span 2;
+    // grid-row: 3 / span 3;
+    // margin-top: 20px;
     .videoListing {
       iframe {
         width: 750px;
+        height: 500px;
       }
     }
   }

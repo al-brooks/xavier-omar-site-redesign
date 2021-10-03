@@ -3,11 +3,10 @@
 #socialNav {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-  // @include testBorder(red);
   @include flex(row, space-between, flex-start);
   padding: 10px;
   .socialBtns {
-    height: 50px;
+    height: 30px;
   }
 }
 
@@ -22,6 +21,12 @@
     .socialBtns {
       height: 30px;
     }
+  }
+}
+
+@media (min-width: 961px) {
+  #socialNav {
+    grid-column: 2 / span 3;
   }
 }
 

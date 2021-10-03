@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { useEffect } from 'react';
 import * as actionCreators from '../store/creators/actionCreators';
+import { NavLink } from 'react-router-dom';
 
 const Merch = (props) => {
   useEffect(() => {
@@ -40,7 +41,14 @@ const Merch = (props) => {
     );
   });
 
-  return <section id="merchSection">{merchItems}</section>;
+  return (
+    <section id="merchSection">
+      <NavLink id="exitBtn" to="/">
+        X
+      </NavLink>
+      {merchItems}
+    </section>
+  );
 };
 
 const mapStateToProps = (state) => {

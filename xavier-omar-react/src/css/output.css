@@ -8,20 +8,18 @@
   color: white;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: auto 250px 250px 1fr;
+  grid-template-rows: auto 1fr 1fr 1fr 1fr;
 }
 
 @media (min-width: 481px) {
   #baseLayout {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto 350px 250px 1fr;
   }
 }
-@media (min-width: 1281px) {
+@media (min-width: 961px) {
   #baseLayout {
     background-position: center;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto 350px 250px 250px 1fr;
   }
 }
 #app {
@@ -38,7 +36,7 @@
   padding: 10px;
 }
 #socialNav .socialBtns {
-  height: 50px;
+  height: 30px;
 }
 
 @media (min-width: 481px) {
@@ -57,6 +55,11 @@
     height: 30px;
   }
 }
+@media (min-width: 961px) {
+  #socialNav {
+    grid-column: 2/span 3;
+  }
+}
 @media (min-width: 1281px) {
   #socialNav {
     grid-column: 3/span 2;
@@ -70,84 +73,67 @@
 #logoSideBar {
   grid-column: 1/2;
   grid-row: 2/3;
-  align-self: center;
+  align-self: flex-start;
+  justify-self: flex-start;
+  padding: 10px 0px 0px 15px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 #logoSideBar #logo {
-  height: 200px;
+  height: 100px;
 }
 
 @media (min-width: 481px) {
   #logoSideBar {
     grid-column: 1/span 2;
-    justify-self: flex-start;
-    padding-left: 20px;
-  }
-  #logoSideBar #logo {
-    height: 225px;
   }
 }
-@media (min-width: 641px) {
+@media (min-width: 961px) {
   #logoSideBar {
-    justify-self: flex-start;
-    padding-left: 20px;
+    grid-column: 3/5;
+    justify-self: center;
   }
   #logoSideBar #logo {
-    height: 225px;
+    height: 200px;
   }
 }
 @media (min-width: 1281px) {
   #logoSideBar {
     padding-top: 50px;
-    grid-column: 3/span 2;
-    grid-row: 2/span 2;
-    justify-self: center;
-    align-self: flex-start;
   }
   #logoSideBar #logo {
-    height: 425px;
+    height: 225px;
   }
 }
 #navSideBar {
-  grid-column: 1/span 2;
-  grid-row: 3/4;
+  grid-column: 1/2;
+  grid-row: 4/5;
 }
 #navSideBar #navLinks {
   padding-left: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 #navSideBar #navLinks .link {
-  background: #db142c;
+  backdrop-filter: blur(10px);
+  border: 2px solid #db142c;
   border-radius: 10px;
   padding: 2px 25px;
   margin: 30px 0px;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   text-decoration: none;
   color: inherit;
 }
 
-@media (min-width: 481px) {
-  #navSideBar {
-    grid-column: 1/2;
-  }
-  #navSideBar #navLinks {
-    padding-left: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-}
 @media (min-width: 961px) {
   #navSideBar {
-    grid-column: 1/2;
+    grid-column: 4/5;
+    justify-self: center;
   }
 }
 @media (min-width: 1281px) {
@@ -156,11 +142,41 @@
     grid-row: 4/5;
   }
 }
+#emailList {
+  grid-column: 1/2;
+  grid-row: 5/6;
+}
+
+@media (min-width: 481px) {
+  #emailList {
+    grid-column: 1/span 2;
+  }
+}
+@media (min-width: 961px) {
+  #emailList {
+    grid-column: 1/span 4;
+    padding-bottom: 10px;
+    justify-self: center;
+  }
+}
 #merchSection {
   overflow-y: scroll;
   scroll-behavior: smooth;
   grid-column: 1/2;
-  grid-row: 4/5;
+  grid-row: 1/6;
+  backdrop-filter: blur(2px);
+}
+#merchSection #exitBtn {
+  margin-top: 10px;
+  margin-left: 25px;
+  padding: 5px 15px;
+  position: fixed;
+  line-height: 30px;
+  text-decoration: none;
+  color: inherit;
+  border: 2px solid white;
+  border-radius: 20px;
+  font-size: 30px;
 }
 #merchSection .merchListing {
   height: 100%;
@@ -198,17 +214,14 @@
   }
 }
 @media (min-width: 641px) {
-  #merchSection {
-    margin-top: 20px;
-  }
   #merchSection .merchListing .merchItem img {
     height: 300px;
   }
 }
-@media (min-width: 1281px) {
+@media (min-width: 961px) {
   #merchSection {
-    grid-column: 2/span 2;
-    grid-row: 3/span 3;
+    grid-column: 2/span 3;
+    grid-row: 1/6;
   }
   #merchSection .merchListing .merchItem img {
     height: 400px;
@@ -218,7 +231,20 @@
   overflow-y: scroll;
   scroll-behavior: smooth;
   grid-column: 1/1;
-  grid-row: 4/5;
+  grid-row: 1/6;
+  backdrop-filter: blur(2px);
+}
+#musicSection #exitBtn {
+  margin-top: 10px;
+  margin-left: 25px;
+  padding: 5px 15px;
+  position: fixed;
+  line-height: 30px;
+  text-decoration: none;
+  color: inherit;
+  border: 2px solid white;
+  border-radius: 20px;
+  font-size: 30px;
 }
 #musicSection .albumListing {
   height: 100%;
@@ -250,18 +276,20 @@
   }
 }
 @media (min-width: 641px) {
+  #musicSection .albumListing .albumCovers {
+    height: 425px;
+  }
+}
+@media (min-width: 961px) {
   #musicSection {
-    margin-top: 20px;
+    grid-column: 2/span 3;
+    grid-row: 1/6;
   }
   #musicSection .albumListing .albumCovers {
     height: 425px;
   }
 }
 @media (min-width: 1281px) {
-  #musicSection {
-    grid-column: 2/span 2;
-    grid-row: 3/span 3;
-  }
   #musicSection .albumListing .albumCovers {
     height: 525px;
   }
@@ -270,7 +298,20 @@
   overflow-y: scroll;
   scroll-behavior: smooth;
   grid-column: 1/2;
-  grid-row: 4/5;
+  grid-row: 1/6;
+  backdrop-filter: blur(2px);
+}
+#videoSection #exitBtn {
+  margin-top: 10px;
+  margin-left: 25px;
+  padding: 5px 15px;
+  position: fixed;
+  line-height: 30px;
+  text-decoration: none;
+  color: inherit;
+  border: 2px solid white;
+  border-radius: 20px;
+  font-size: 30px;
 }
 #videoSection .videoListing {
   height: 100%;
@@ -287,28 +328,29 @@
 @media (min-width: 481px) {
   #videoSection {
     grid-column: 1/span 2;
-    grid-row: 4/5;
   }
   #videoSection .videoListing iframe {
     width: 481px;
   }
 }
 @media (min-width: 641px) {
+  #videoSection .videoListing iframe {
+    width: 641px;
+  }
+}
+@media (min-width: 961px) {
   #videoSection {
-    margin-top: 20px;
+    grid-column: 2/span 3;
+    grid-row: 1/6;
   }
   #videoSection .videoListing iframe {
     width: 641px;
   }
 }
 @media (min-width: 1281px) {
-  #videoSection {
-    grid-column: 2/span 2;
-    grid-row: 3/span 3;
-    margin-top: 20px;
-  }
   #videoSection .videoListing iframe {
     width: 750px;
+    height: 500px;
   }
 }
 

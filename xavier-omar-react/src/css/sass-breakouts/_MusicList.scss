@@ -4,9 +4,21 @@
   overflow-y: scroll;
   scroll-behavior: smooth;
   grid-column: 1 / 1;
-  grid-row: 4 / 5;
-  // backdrop-filter: blur(6px);
+  grid-row: 1 / 6;
+  backdrop-filter: blur(2px);
   // @include testBorder(red);
+  #exitBtn {
+    margin-top: 10px;
+    margin-left: 25px;
+    padding: 5px 15px;
+    position: fixed;
+    line-height: 30px;
+    text-decoration: none;
+    color: inherit;
+    border: 2px solid white;
+    border-radius: 20px;
+    font-size: 30px;
+  }
   .albumListing {
     height: 100%;
     @include flex(column, center, center);
@@ -37,7 +49,7 @@
 }
 @media (min-width: 641px) {
   #musicSection {
-    margin-top: 20px;
+    // margin-top: 20px;
     .albumListing {
       .albumCovers {
         height: 425px;
@@ -45,12 +57,22 @@
     }
   }
 }
-// @media (min-width: 961px)
+@media (min-width: 961px) {
+  #musicSection {
+    grid-column: 2 / span 3;
+    grid-row: 1 / 6;
+    .albumListing {
+      .albumCovers {
+        height: 425px;
+      }
+    }
+  }
+}
 // @media (min-width: 1025px)
 @media (min-width: 1281px) {
   #musicSection {
-    grid-column: 2 / span 2;
-    grid-row: 3 / span 3;
+    // grid-column: 2 / span 2;
+    // grid-row: 3 / span 3;
     .albumListing {
       .albumCovers {
         height: 525px;

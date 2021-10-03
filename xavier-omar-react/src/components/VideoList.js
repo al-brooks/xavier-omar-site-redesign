@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import * as actionCreators from '../store/creators/actionCreators';
 
 const VideoList = (props) => {
@@ -23,7 +24,14 @@ const VideoList = (props) => {
     );
   });
 
-  return <section id="videoSection">{Videos}</section>;
+  return (
+    <section id="videoSection">
+      <NavLink id="exitBtn" to="/">
+        X
+      </NavLink>
+      {Videos}
+    </section>
+  );
 };
 
 const mapStateToProps = (state) => {

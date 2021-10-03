@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import apple from '../images/Apple-logo-min.png';
 import spotify from '../images/Spotify-logo-min.png';
 import tidal from '../images/Tidal-logo-min.png';
@@ -33,7 +34,14 @@ const MusicList = (props) => {
     );
   });
 
-  return <section id="musicSection">{musicItems}</section>;
+  return (
+    <section id="musicSection">
+      <NavLink id="exitBtn" to="/">
+        X
+      </NavLink>
+      {musicItems}
+    </section>
+  );
 };
 
 const mapStateToProps = (state) => {

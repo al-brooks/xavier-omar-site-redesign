@@ -1,18 +1,20 @@
 @import './mixins';
 
 #navSideBar {
-  grid-column: 1 / span 2;
-  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
   // @include testBorder(red);
   #navLinks {
     padding-left: 10px;
-    @include flex(column, center, center);
+    @include flex(column, center, flex-start);
     .link {
-      background: $primaryColor;
+      // background: $primaryColor;
+      backdrop-filter: blur(10px);
+      border: 2px solid $primaryColor;
       border-radius: 10px;
       padding: 2px 25px;
       margin: 30px 0px;
-      font-size: 25px;
+      font-size: 20px;
       font-weight: bold;
       text-decoration: none;
       color: inherit;
@@ -21,20 +23,15 @@
 }
 
 @media (min-width: 481px) {
-  #navSideBar {
-    grid-column: 1 / 2;
-    #navLinks {
-      padding-left: 100px;
-      @include flex(column, flex-start, flex-start);
-    }
-  }
 }
+
 @media (min-width: 641px) {
 }
 
 @media (min-width: 961px) {
   #navSideBar {
-    grid-column: 1 / 2;
+    grid-column: 4 / 5;
+    justify-self: center;
   }
 }
 
