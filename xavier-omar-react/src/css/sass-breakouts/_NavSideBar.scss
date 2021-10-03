@@ -37,5 +37,10 @@
     grid-column: 1 / 2;
   }
 }
-// @media (min-width: 1025px)
-// @media (min-width: 1281px)
+
+@media (min-width: 1281px) {
+  #navSideBar {
+    grid-column: 4 / 5;
+    grid-row: 4 / 5;
+  }
+}

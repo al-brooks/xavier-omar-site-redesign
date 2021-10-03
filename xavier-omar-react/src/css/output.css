@@ -17,6 +17,13 @@
     grid-template-rows: auto 350px 250px 1fr;
   }
 }
+@media (min-width: 1281px) {
+  #baseLayout {
+    background-position: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 350px 250px 250px 1fr;
+  }
+}
 #app {
   display: none;
 }
@@ -50,6 +57,16 @@
     height: 30px;
   }
 }
+@media (min-width: 1281px) {
+  #socialNav {
+    grid-column: 3/span 2;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
 #logoSideBar {
   grid-column: 1/2;
   grid-row: 2/3;
@@ -80,6 +97,18 @@
   }
   #logoSideBar #logo {
     height: 225px;
+  }
+}
+@media (min-width: 1281px) {
+  #logoSideBar {
+    padding-top: 50px;
+    grid-column: 3/span 2;
+    grid-row: 2/span 2;
+    justify-self: center;
+    align-self: flex-start;
+  }
+  #logoSideBar #logo {
+    height: 425px;
   }
 }
 #navSideBar {
@@ -121,12 +150,17 @@
     grid-column: 1/2;
   }
 }
+@media (min-width: 1281px) {
+  #navSideBar {
+    grid-column: 4/5;
+    grid-row: 4/5;
+  }
+}
 #merchSection {
   overflow-y: scroll;
   scroll-behavior: smooth;
   grid-column: 1/2;
   grid-row: 4/5;
-  backdrop-filter: blur(6px);
 }
 #merchSection .merchListing {
   height: 100%;
@@ -171,12 +205,20 @@
     height: 300px;
   }
 }
+@media (min-width: 1281px) {
+  #merchSection {
+    grid-column: 2/span 2;
+    grid-row: 3/span 3;
+  }
+  #merchSection .merchListing .merchItem img {
+    height: 400px;
+  }
+}
 #musicSection {
   overflow-y: scroll;
   scroll-behavior: smooth;
   grid-column: 1/1;
   grid-row: 4/5;
-  backdrop-filter: blur(6px);
 }
 #musicSection .albumListing {
   height: 100%;
@@ -215,12 +257,20 @@
     height: 425px;
   }
 }
+@media (min-width: 1281px) {
+  #musicSection {
+    grid-column: 2/span 2;
+    grid-row: 3/span 3;
+  }
+  #musicSection .albumListing .albumCovers {
+    height: 525px;
+  }
+}
 #videoSection {
   overflow-y: scroll;
   scroll-behavior: smooth;
   grid-column: 1/2;
   grid-row: 4/5;
-  backdrop-filter: blur(6px);
 }
 #videoSection .videoListing {
   height: 100%;
@@ -249,6 +299,16 @@
   }
   #videoSection .videoListing iframe {
     width: 641px;
+  }
+}
+@media (min-width: 1281px) {
+  #videoSection {
+    grid-column: 2/span 2;
+    grid-row: 3/span 3;
+    margin-top: 20px;
+  }
+  #videoSection .videoListing iframe {
+    width: 750px;
   }
 }
 

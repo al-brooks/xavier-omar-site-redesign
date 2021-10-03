@@ -24,6 +24,11 @@
     }
   }
 }
-// @media (min-width: 961px)
-// @media (min-width: 1025px)
-// @media (min-width: 1281px)
+
+@media (min-width: 1281px) {
+  #socialNav {
+    grid-column: 3 / span 2;
+    padding-right: 30px;
+    @include flex(row, space-between, flex-start);
+  }
+}
