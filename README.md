@@ -6,7 +6,7 @@ app link: https://xavier-omar-redesign.surge.sh/
 
 ## App Description:
 
-This app serves as the personal brand website for an artist. In this case that artist is the R&B/Soul singer Xavier Omär - he's great, so you should definitely checkout his music. It provides access to his album discography, latest music videos, merch, and the ability to sign up to join his team's mailing list.
+This app serves as the personal brand website for an artist. In this case that artist is the R&B/Soul singer Xavier Omär - he's great, so you should definitely check out his music. It provides access to his album discography, latest music videos, merch, and the ability to sign up for an exclusive mailing list.
 
 #### Images Used For App:
 
@@ -17,7 +17,7 @@ This app serves as the personal brand website for an artist. In this case that a
 
 ## Motivation
 
-I created this website based on my love for music. I think it's important for artists to have control over their art and be able to engage their fans on their own terms. I decided to move forward with designing an artist web page that would serve as a way to connect with true fans who support their music.
+I created this website based on my love for music. I think it's important for artists to have control over their art and be able to engage with their fans on their own terms. I decided to move forward with designing an artist web page that would serve as a way to connect with true fans who support their music.
 
 ## Features
 
