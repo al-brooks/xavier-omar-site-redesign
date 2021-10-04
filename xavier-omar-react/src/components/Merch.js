@@ -14,10 +14,6 @@ const Merch = (props) => {
         <div className="merchItem">
           <h3>{merchItem.merch_name}</h3>
           <img src={merchItem.front_pic} alt="merch front pic" />
-          <div className="description">
-            <span>Add increment and decrement quantity button</span>
-            <h5>{merchItem.price}</h5>
-          </div>
         </div>
         <form action="http://localhost:8080/payment" method="POST">
           <input
@@ -35,7 +31,7 @@ const Merch = (props) => {
             name="product_image"
             value={merchItem.front_pic}
           />
-          <button type="submit">Buy</button>
+          <button type="submit">Buy - ${merchItem.price}</button>
         </form>
       </div>
     );

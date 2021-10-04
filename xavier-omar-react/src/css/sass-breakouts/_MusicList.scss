@@ -6,7 +6,6 @@
   grid-column: 1 / 1;
   grid-row: 1 / 6;
   backdrop-filter: blur(2px);
-  // @include testBorder(red);
   #exitBtn {
     margin-top: 10px;
     margin-left: 25px;
@@ -17,7 +16,11 @@
     color: inherit;
     border: 2px solid white;
     border-radius: 20px;
-    font-size: 30px;
+    font-size: 20px;
+    &:hover {
+      background-color: white;
+      color: $secondaryColor;
+    }
   }
   .albumListing {
     height: 100%;
@@ -27,10 +30,13 @@
     }
     .streamingLinks {
       @include flex(row, center, center);
+      h4 {
+        margin-right: 10px;
+      }
       a {
         img {
           margin: 10px;
-          height: 50px;
+          height: 30px;
         }
       }
     }
@@ -71,11 +77,9 @@
 // @media (min-width: 1025px)
 @media (min-width: 1281px) {
   #musicSection {
-    // grid-column: 2 / span 2;
-    // grid-row: 3 / span 3;
     .albumListing {
       .albumCovers {
-        height: 525px;
+        height: 555px;
       }
     }
   }
