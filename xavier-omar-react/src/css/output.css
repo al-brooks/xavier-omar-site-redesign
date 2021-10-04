@@ -36,38 +36,32 @@
   padding: 10px;
 }
 #socialNav .socialBtns {
-  height: 30px;
+  height: 25px;
 }
 
 @media (min-width: 481px) {
   #socialNav {
-    grid-column: 1/span 2;
+    grid-column: 1/2;
   }
 }
 @media (min-width: 641px) {
   #socialNav {
+    grid-column: 2/3;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: flex-start;
   }
   #socialNav .socialBtns {
-    height: 30px;
+    margin-right: 10px;
   }
 }
 @media (min-width: 961px) {
   #socialNav {
     grid-column: 2/span 3;
   }
-}
-@media (min-width: 1281px) {
-  #socialNav {
-    grid-column: 3/span 2;
-    padding-right: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+  #socialNav .socialBtns {
+    height: 30px;
   }
 }
 #logoSideBar {
@@ -75,7 +69,7 @@
   grid-row: 2/3;
   align-self: flex-start;
   justify-self: flex-start;
-  padding: 10px 0px 0px 15px;
+  padding: 20px 0px 0px 15px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -90,6 +84,16 @@
     grid-column: 1/span 2;
   }
 }
+@media (min-width: 641px) {
+  #logoSideBar {
+    grid-column: 2/3;
+    justify-self: flex-start;
+  }
+  #logoSideBar #logo {
+    padding-left: 90px;
+    height: 150px;
+  }
+}
 @media (min-width: 961px) {
   #logoSideBar {
     grid-column: 3/5;
@@ -102,14 +106,16 @@
 @media (min-width: 1281px) {
   #logoSideBar {
     padding-top: 50px;
+    grid-row: 2/span 5;
   }
   #logoSideBar #logo {
-    height: 225px;
+    height: 325px;
   }
 }
 #navSideBar {
   grid-column: 1/2;
-  grid-row: 4/5;
+  grid-row: 3/5;
+  align-self: center;
 }
 #navSideBar #navLinks {
   padding-left: 10px;
@@ -120,44 +126,94 @@
 }
 #navSideBar #navLinks .link {
   backdrop-filter: blur(10px);
-  border: 2px solid #db142c;
-  border-radius: 10px;
-  padding: 2px 25px;
-  margin: 30px 0px;
-  font-size: 20px;
+  border: 1px solid red;
+  border-radius: 5px;
+  padding: 2px 15px;
+  margin: 10px 0px;
+  font-size: 15px;
   font-weight: bold;
   text-decoration: none;
   color: inherit;
 }
+#navSideBar #navLinks .link:hover {
+  background-color: white;
+  color: #6a77ff;
+  border: 1px solid white;
+}
 
-@media (min-width: 961px) {
+@media (min-width: 641px) {
   #navSideBar {
-    grid-column: 4/5;
-    justify-self: center;
+    grid-row: 3/5;
+  }
+  #navSideBar #navLinks .link {
+    font-size: 20px;
   }
 }
 @media (min-width: 1281px) {
-  #navSideBar {
-    grid-column: 4/5;
-    grid-row: 4/5;
+  #navSideBar #navLinks .link {
+    font-size: 25px;
   }
 }
 #emailList {
   grid-column: 1/2;
   grid-row: 5/6;
+}
+#emailList #subscribe {
   padding-left: 10px;
+  font-size: 0.8em;
+}
+#emailList #emailForm {
+  margin-top: 5px;
+  padding-left: 10px;
+  color: white;
+}
+#emailList #emailForm input {
+  color: white;
+  border: none;
+  border-bottom: 1px solid red;
+  background-color: transparent;
+}
+#emailList #emailForm input::placeholder {
+  color: white;
+}
+#emailList #emailForm button {
+  background: transparent;
+  border: 1px solid red;
+  border-radius: 5px;
+  padding: 2px 15px;
+  margin: 10px 0px 10px 10px;
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+}
+#emailList #emailForm button:hover {
+  background-color: white;
+  color: #6a77ff;
+  border: 1px solid white;
 }
 
 @media (min-width: 481px) {
-  #emailList {
+  #emailList #emailForm {
     grid-column: 1/span 2;
   }
 }
 @media (min-width: 961px) {
   #emailList {
-    grid-column: 1/span 4;
-    padding-bottom: 10px;
+    grid-column: 2/4;
+    grid-row: 5/6;
     justify-self: center;
+    align-self: flex-end;
+  }
+  #emailList #subscribe {
+    padding-left: 10px;
+    font-size: 1em;
+    font-weight: bold;
+  }
+  #emailList #emailForm input {
+    font-size: 1em;
+  }
+  #emailList #emailForm button {
+    font-size: 1em;
   }
 }
 #merchSection {
@@ -356,7 +412,7 @@
 }
 #success {
   grid-column: 1/2;
-  grid-row: 4/5;
+  grid-row: 3/4;
   backdrop-filter: blur(2px);
 }
 #success #exitBtn {
@@ -367,6 +423,10 @@
   border: 2px solid white;
   border-radius: 20px;
   font-size: 20px;
+}
+#success #exitBtn:hover {
+  background-color: white;
+  color: #6a77ff;
 }
 #success #successMsg {
   margin-top: 20px;
@@ -398,6 +458,10 @@
   border: 2px solid white;
   border-radius: 20px;
   font-size: 20px;
+}
+#emailSuccess #exitBtn:hover {
+  background-color: white;
+  color: #6a77ff;
 }
 #emailSuccess #emailMsg {
   margin-top: 20px;

@@ -6,20 +6,21 @@
   @include flex(row, space-between, flex-start);
   padding: 10px;
   .socialBtns {
-    height: 30px;
+    height: 25px;
   }
 }
 
 @media (min-width: 481px) {
   #socialNav {
-    grid-column: 1 / span 2;
+    grid-column: 1 / 2;
   }
 }
 @media (min-width: 641px) {
   #socialNav {
-    @include flex(row, space-around, flex-start);
+    grid-column: 2 / 3;
+    @include flex(row, flex-end, flex-start);
     .socialBtns {
-      height: 30px;
+      margin-right: 10px;
     }
   }
 }
@@ -27,13 +28,16 @@
 @media (min-width: 961px) {
   #socialNav {
     grid-column: 2 / span 3;
+    .socialBtns {
+      height: 30px;
+    }
   }
 }
 
 @media (min-width: 1281px) {
-  #socialNav {
-    grid-column: 3 / span 2;
-    padding-right: 30px;
-    @include flex(row, space-between, flex-start);
-  }
+  // #socialNav {
+  //   grid-column: 3 / span 2;
+  //   padding-right: 30px;
+  //   @include flex(row, space-between, flex-start);
+  // }
 }

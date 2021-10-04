@@ -1,13 +1,48 @@
+@import './mixins';
 // mobile
 #emailList {
   grid-column: 1 / 2;
   grid-row: 5 / 6;
-  padding-left: 10px;
+  #subscribe {
+    padding-left: 10px;
+    font-size: 0.8em;
+  }
+  #emailForm {
+    margin-top: 5px;
+    padding-left: 10px;
+    color: white;
+    input {
+      color: white;
+      border: none;
+      border-bottom: 1px solid red;
+      background-color: transparent;
+      &::placeholder {
+        color: white;
+      }
+    }
+    button {
+      background: transparent;
+      border: 1px solid red;
+      border-radius: 5px;
+      padding: 2px 15px;
+      margin: 10px 0px 10px 10px;
+      font-weight: bold;
+      text-decoration: none;
+      color: inherit;
+      &:hover {
+        background-color: white;
+        color: $secondaryColor;
+        border: 1px solid white;
+      }
+    }
+  }
 }
 // small tablets
 @media (min-width: 481px) {
   #emailList {
-    grid-column: 1 / span 2;
+    #emailForm {
+      grid-column: 1 / span 2;
+    }
   }
 }
 
@@ -18,9 +53,23 @@
 // landscape tablets
 @media (min-width: 961px) {
   #emailList {
-    grid-column: 1 / span 4;
-    padding-bottom: 10px;
+    grid-column: 2 / 4;
+    grid-row: 5 / 6;
     justify-self: center;
+    align-self: flex-end;
+    #subscribe {
+      padding-left: 10px;
+      font-size: 1em;
+      font-weight: bold;
+    }
+    #emailForm {
+      input {
+        font-size: 1em;
+      }
+      button {
+        font-size: 1em;
+      }
+    }
   }
 }
 

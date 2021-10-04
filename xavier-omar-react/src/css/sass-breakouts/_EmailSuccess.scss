@@ -4,8 +4,6 @@
   grid-row: 4 / 5;
   backdrop-filter: blur(2px);
   #exitBtn {
-    // margin-top: 10px;
-    // margin-left: 25px;
     padding: 5px 15px;
     line-height: 30px;
     text-decoration: none;
@@ -13,6 +11,10 @@
     border: 2px solid white;
     border-radius: 20px;
     font-size: 20px;
+    &:hover {
+      background-color: white;
+      color: $secondaryColor;
+    }
   }
   #emailMsg {
     margin-top: 20px;

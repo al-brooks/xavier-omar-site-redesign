@@ -2,22 +2,27 @@
 
 #navSideBar {
   grid-column: 1 / 2;
-  grid-row: 4 / 5;
-  // @include testBorder(red);
+  grid-row: 3 / 5;
+  align-self: center;
   #navLinks {
     padding-left: 10px;
     @include flex(column, center, flex-start);
     .link {
       // background: $primaryColor;
       backdrop-filter: blur(10px);
-      border: 2px solid $primaryColor;
-      border-radius: 10px;
-      padding: 2px 25px;
-      margin: 30px 0px;
-      font-size: 20px;
+      border: 1px solid red;
+      border-radius: 5px;
+      padding: 2px 15px;
+      margin: 10px 0px;
+      font-size: 15px;
       font-weight: bold;
       text-decoration: none;
       color: inherit;
+      &:hover {
+        background-color: white;
+        color: $secondaryColor;
+        border: 1px solid white;
+      }
     }
   }
 }
@@ -26,18 +31,25 @@
 }
 
 @media (min-width: 641px) {
+  #navSideBar {
+    grid-row: 3 / 5;
+    #navLinks {
+      .link {
+        font-size: 20px;
+      }
+    }
+  }
 }
 
 @media (min-width: 961px) {
-  #navSideBar {
-    grid-column: 4 / 5;
-    justify-self: center;
-  }
 }
 
 @media (min-width: 1281px) {
   #navSideBar {
-    grid-column: 4 / 5;
-    grid-row: 4 / 5;
+    #navLinks {
+      .link {
+        font-size: 25px;
+      }
+    }
   }
 }
