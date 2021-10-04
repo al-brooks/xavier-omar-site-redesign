@@ -72,8 +72,8 @@ app.post('/payment', async (req, res) => {
       }
     ],
     mode: 'payment',
-    success_url: 'http://localhost:3000/payment/success',
-    cancel_url: 'http://localhost:3000'
+    success_url: 'https://xavier-omar-redesign.surge.sh//payment/success',
+    cancel_url: 'https://xavier-omar-redesign.surge.sh/'
   });
   res.redirect(303, session.url);
 });
@@ -106,7 +106,7 @@ app.post('/email', async (req, res) => {
   });
 
   db.none('INSERT INTO users(email) VALUES($1)', [email]).then(() => {
-    res.redirect('http://localhost:3000/email/success');
+    res.redirect('https://xavier-omar-redesign.surge.sh//email/success');
   });
 });
 

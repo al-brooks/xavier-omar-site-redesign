@@ -2,7 +2,7 @@
 
 ## App: Xavier Omär Personal Site Redesign
 
-app link:
+app link: https://xavier-omar-redesign.surge.sh/
 
 ## App Description:
 
@@ -14,7 +14,7 @@ I created this website based on my love for music. I think it's important for ar
 
 ## Features
 
-Stripe checkout api, allows users to purchase Merch. Nodemailer provides an email functionality that takes user's emails and sends them a hello email upon submission. Users are able to view Xavier's discography, and latest videos.
+The Stripe api allows users to purchase Merch. Nodemailer provides an email functionality that takes user's emails and sends them a hello email upon submission. Users are able to view Xavier's discography, and latest videos.
 
 ## Site Screenshots:
 
