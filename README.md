@@ -14,7 +14,7 @@ I created this website based on my love for music. I think it's important for ar
 
 ## Features
 
-The App landing page provides the option to login as an User/Guest or to sign up on the App. Movie Scoop give you an abundance of movies to see the details, ratings, and reviews.
+Stripe checkout api, allows users to purchase Merch. Nodemailer provides an email functionality that takes user's emails and sends them a hello email upon submission. Users are able to view Xavier's discography, and latest videos.
 
 ## Site Screenshots:
 
