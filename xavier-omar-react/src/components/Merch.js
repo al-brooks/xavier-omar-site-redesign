@@ -15,7 +15,10 @@ const Merch = (props) => {
           <h3>{merchItem.merch_name}</h3>
           <img src={merchItem.front_pic} alt="merch front pic" />
         </div>
-        <form action="http://localhost:8080/payment" method="POST">
+        <form
+          action="https://xavier-omar-redesign-server.herokuapp.com/payment"
+          method="POST"
+        >
           <input
             type="hidden"
             name="product_name"
