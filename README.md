@@ -19,12 +19,16 @@ The Stripe api allows users to purchase Merch. Nodemailer provides an email func
 ## Site Screenshots:
 
 ### Large Screen Landing Page
+<img width="1280" alt="large-screen-landing" src="https://user-images.githubusercontent.com/47277927/135782499-f2923924-8343-427e-9734-e88fdab094a7.png">
 
 ### Mobile Landing Page
+<img width="308" alt="mobile-screen-landing" src="https://user-images.githubusercontent.com/47277927/135782510-b677b307-f45b-42b7-996e-570f46de6e1c.png">
 
 ### Merch Section
+<img width="1037" alt="merch-section" src="https://user-images.githubusercontent.com/47277927/135782518-bb51ef96-bd2b-4f5d-b71e-7fd228753992.png">
 
 ### Stripe Checkout Page
+<img width="1280" alt="stripe-checkout" src="https://user-images.githubusercontent.com/47277927/135782523-f6874651-b30c-483b-90c3-bdd5e6d822fd.png">
 
 To test the checkout page, please use the below test cards (per stripe documentation)
 NUMBER | DESCRIPTION
@@ -34,8 +38,10 @@ NUMBER | DESCRIPTION
 4000 0000 0000 9995 | Fails with message of **insufficient funds**
 
 ### Discography Section
+<img width="942" alt="music-list-section" src="https://user-images.githubusercontent.com/47277927/135782537-b0daacfb-ed8a-4dfc-83e2-7d13bd88fe61.png">
 
 ### Video Section
+<img width="984" alt="video-list-section" src="https://user-images.githubusercontent.com/47277927/135782544-d4a23212-0689-4ad6-876c-1698b8d7a2fa.png">
 
 #### Front-End Technologies
 
