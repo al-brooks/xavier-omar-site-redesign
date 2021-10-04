@@ -23,20 +23,26 @@ I created this website based on my love for music. I think it's important for ar
 
 The Stripe api allows users to purchase Merch. Nodemailer provides an email functionality that takes user's emails and sends them a hello email upon submission. Users are able to view Xavier's discography, and latest videos.
 
-## Site Screenshots:
+## Landing Page:
 
-### Large Screen Landing Page
+### Large Screen Landing Page Screenshot
 
 <img width="1280" alt="large-screen-landing" src="https://user-images.githubusercontent.com/47277927/135782499-f2923924-8343-427e-9734-e88fdab094a7.png">
 
-#### Landing Page Walkthrough
+### Landing Page Walkthrough
 
 <img width="640" alt="main-landing-page" src="https://user-images.githubusercontent.com/47277927/135874582-233d534c-5535-47ef-aa93-7316a9a0335e.gif">
 
 
-### Mobile Landing Page
+### Mobile Landing Page Screenshot
 
 <img width="308" alt="mobile-screen-landing" src="https://user-images.githubusercontent.com/47277927/135782510-b677b307-f45b-42b7-996e-570f46de6e1c.png">
+
+## Sidebar Navigation
+
+### Sidebar Walkthrough
+
+<img width="640" alt="side-bar-navigation" src="https://user-images.githubusercontent.com/47277927/135874582-233d534c-5535-47ef-aa93-7316a9a0335e.gif">
 
 ### Merch Section
 
