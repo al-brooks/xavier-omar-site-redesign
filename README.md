@@ -17,7 +17,7 @@ This app serves as the personal brand website for an artist. In this case that a
 
 ## Motivation
 
-I created this website based on my love for music. I think it's important for artists to have control over their art and be able to engage their fans on their own terms. I decided to move forward with designing an artist web page that would serve as a way to connect with true fans who support their music.
+I created this website based on my love for music. I think it's important for artists to have control over their art and be able to engage with their fans on their own terms. I decided to move forward with designing an artist web page that would serve as a way to connect with true fans who support their music.
 
 ## Features
 
