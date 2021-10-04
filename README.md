@@ -25,14 +25,9 @@ The Stripe api allows users to purchase Merch. Nodemailer provides an email func
 
 ## Landing Page:
 
-### Large Screen Landing Page Screenshot
+### Large Screen Landing Page
 
 <img width="1280" alt="large-screen-landing" src="https://user-images.githubusercontent.com/47277927/135782499-f2923924-8343-427e-9734-e88fdab094a7.png">
-
-### Landing Page Walkthrough
-
-<img width="640" alt="main-landing-page" src="https://user-images.githubusercontent.com/47277927/135874582-233d534c-5535-47ef-aa93-7316a9a0335e.gif">
-
 
 ### Mobile Landing Page Screenshot
 
@@ -40,13 +35,17 @@ The Stripe api allows users to purchase Merch. Nodemailer provides an email func
 
 ## Sidebar Navigation
 
-### Sidebar Walkthrough
-
-<img width="640" alt="side-bar-navigation" src="https://user-images.githubusercontent.com/47277927/135874582-233d534c-5535-47ef-aa93-7316a9a0335e.gif">
-
 ### Merch Section
 
 <img width="1037" alt="merch-section" src="https://user-images.githubusercontent.com/47277927/135782518-bb51ef96-bd2b-4f5d-b71e-7fd228753992.png">
+
+### Discography Section
+
+<img width="942" alt="music-list-section" src="https://user-images.githubusercontent.com/47277927/135782537-b0daacfb-ed8a-4dfc-83e2-7d13bd88fe61.png">
+
+### Video Section
+
+<img width="984" alt="video-list-section" src="https://user-images.githubusercontent.com/47277927/135782544-d4a23212-0689-4ad6-876c-1698b8d7a2fa.png">
 
 ### Stripe Checkout Page
 
@@ -58,14 +57,6 @@ NUMBER | DESCRIPTION
 4242 4242 4242 4242 | Succeeds and processes payment
 4000 0000 0000 3220 | Prompts for additional authentication (isn't required for test mode)
 4000 0000 0000 9995 | Fails with message of **insufficient funds**
-
-### Discography Section
-
-<img width="942" alt="music-list-section" src="https://user-images.githubusercontent.com/47277927/135782537-b0daacfb-ed8a-4dfc-83e2-7d13bd88fe61.png">
-
-### Video Section
-
-<img width="984" alt="video-list-section" src="https://user-images.githubusercontent.com/47277927/135782544-d4a23212-0689-4ad6-876c-1698b8d7a2fa.png">
 
 #### Front-End Technologies
 
