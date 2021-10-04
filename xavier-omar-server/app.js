@@ -93,7 +93,7 @@ app.post('/email', async (req, res) => {
     from: 'xavieromarredesign@email.com',
     to: `${email}`,
     subject: 'Welcome to our mailing list!',
-    html: `<h4>Thanks so much for supporting Xavier Omar and his vision!</h4><p>We love our fans and will send you exclusive offers and keep you posted on upcoming shows! If you have any questions please reach out to us at <b>xavieromarredesign@email.com</b></p>`
+    html: `<h4>Thanks so much for supporting Xavier Omär and his vision!</h4><p>We love our fans and will send you exclusive offers and keep you posted on upcoming shows! If you have any questions please reach out to us at <b>xavieromarredesign@email.com</b></p>`
   };
 
   transport.sendMail(message, function (err, info) {
