@@ -2,7 +2,6 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const stripe = require('stripe')(process.env.SECRET_KEY);
-const { v4: uuidv4 } = require('uuid');
 
 const app = express();
 const pgp = require('pg-promise')();
@@ -18,9 +17,10 @@ app.use(cors());
 //routes
 
 app.get('/', (req, res) => {
-  res.send('Node Server is Working!');
+  res.send({ success: true });
 });
 
+// database / api routes
 app.get('/api/music', (req, res) => {
   db.any('SELECT* FROM music')
     .then((music) => {
@@ -51,7 +51,7 @@ app.get('/api/merch', (req, res) => {
     });
 });
 
-// updated stripe checkout
+// payment route
 app.post('/payment', async (req, res) => {
   const name = req.body.product_name;
   const price = req.body.product_price;
@@ -78,6 +78,7 @@ app.post('/payment', async (req, res) => {
   res.redirect(303, session.url);
 });
 
+// email route
 app.post('/email', async (req, res) => {
   const email = req.body.email;
   let transport = nodemailer.createTransport({
