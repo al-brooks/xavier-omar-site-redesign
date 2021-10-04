@@ -29,8 +29,6 @@ The Stripe api allows users to purchase Merch. Nodemailer provides an email func
 
 <img width="1280" alt="large-screen-landing" src="https://user-images.githubusercontent.com/47277927/135782499-f2923924-8343-427e-9734-e88fdab094a7.png">
 
-![main-landing-page]('readme-gifs/main-landing-page.gif)
-
 ### Mobile Landing Page
 
 <img width="308" alt="mobile-screen-landing" src="https://user-images.githubusercontent.com/47277927/135782510-b677b307-f45b-42b7-996e-570f46de6e1c.png">
